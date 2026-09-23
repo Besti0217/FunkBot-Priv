@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FunkBot — Política de Privacidad</title>
+  <style>
+    :root {
+      --sky: #56c8ff;
+      --sky-dark: #2196d3;
+      --pink: #ff76b7;
+      --bg: #07111f;
+      --card: rgba(13, 29, 49, 0.82);
+      --text: #eef8ff;
+      --muted: #a9c3d6;
+      --line: rgba(86, 200, 255, 0.18);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 15% 15%, rgba(86, 200, 255, .22), transparent 28%),
+        radial-gradient(circle at 85% 20%, rgba(255, 118, 183, .18), transparent 25%),
+        radial-gradient(circle at 50% 90%, rgba(33, 150, 211, .14), transparent 30%),
+        linear-gradient(135deg, #050b14, #081827 55%, #100b19);
+      background-attachment: fixed;
+      line-height: 1.7;
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background-image: radial-gradient(rgba(255,255,255,.06) 1px, transparent 1px);
+      background-size: 28px 28px;
+      mask-image: linear-gradient(to bottom, black, transparent 75%);
+    }
+    .container {
+      width: min(1050px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 55px 0 70px;
+    }
+    .hero {
+      position: relative;
+      overflow: hidden;
+      text-align: center;
+      padding: 62px 28px 54px;
+      border: 1px solid rgba(86, 200, 255, .25);
+      border-radius: 30px;
+      background: linear-gradient(145deg, rgba(16, 43, 69, .88), rgba(18, 18, 39, .78));
+      box-shadow: 0 25px 80px rgba(0,0,0,.35), 0 0 60px rgba(86,200,255,.08);
+      backdrop-filter: blur(18px);
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      width: 260px;
+      height: 260px;
+      right: -100px;
+      top: -120px;
+      border-radius: 50%;
+      background: rgba(255,118,183,.16);
+      filter: blur(10px);
+    }
+    .logo {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 86px;
+      height: 86px;
+      margin-bottom: 18px;
+      border-radius: 25px;
+      font-size: 42px;
+      background: linear-gradient(145deg, var(--sky), #8ee0ff);
+      box-shadow: 0 12px 40px rgba(86,200,255,.32);
+    }
+    h1 {
+      margin: 0;
+      font-size: clamp(2.4rem, 7vw, 4.5rem);
+      letter-spacing: -2px;
+      line-height: 1;
+      background: linear-gradient(90deg, #7bd8ff, #ffffff 45%, #ff9dcc);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    .subtitle {
+      margin: 18px auto 0;
+      max-width: 680px;
+      color: var(--muted);
+      font-size: 1.05rem;
+    }
+    .date {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 7px 14px;
+      border-radius: 999px;
+      color: #dff5ff;
+      background: rgba(86,200,255,.09);
+      border: 1px solid rgba(86,200,255,.18);
+      font-size: .88rem;
+    }
+    .content {
+      margin-top: 24px;
+      display: grid;
+      gap: 16px;
+    }
+    .card {
+      padding: 30px 32px;
+      border-radius: 22px;
+      border: 1px solid var(--line);
+      background: var(--card);
+      box-shadow: 0 15px 45px rgba(0,0,0,.2);
+      backdrop-filter: blur(14px);
+      transition: transform .18s ease, border-color .18s ease;
+    }
+    .card:hover {
+      border-color: rgba(86,200,255,.32);
+      transform: translateY(-2px);
+    }
+    h2 {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin: 0 0 13px;
+      color: #9cddff;
+      font-size: 1.35rem;
+    }
+    h2 span {
+      display: grid;
+      place-items: center;
+      width: 35px;
+      height: 35px;
+      border-radius: 11px;
+      color: white;
+      background: linear-gradient(135deg, var(--sky-dark), var(--pink));
+      font-size: .9rem;
+      flex: 0 0 auto;
+    }
+    p { margin: 9px 0; color: #d9eaf4; }
+    ul { margin: 12px 0 4px; padding-left: 22px; color: #d9eaf4; }
+    li { margin: 8px 0; }
+    li::marker { color: var(--pink); }
+    strong { color: #ffffff; }
+    .highlight {
+      margin-top: 18px;
+      padding: 18px 20px;
+      border-left: 3px solid var(--pink);
+      border-radius: 0 14px 14px 0;
+      background: linear-gradient(90deg, rgba(255,118,183,.11), rgba(86,200,255,.05));
+    }
+    .contact {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      margin-top: 16px;
+    }
+    .contact-box {
+      padding: 16px;
+      border-radius: 15px;
+      background: rgba(86,200,255,.06);
+      border: 1px solid rgba(86,200,255,.12);
+    }
+    .contact-box b {
+      display: block;
+      color: #8edcff;
+      margin-bottom: 3px;
+    }
+    footer {
+      text-align: center;
+      margin-top: 28px;
+      color: #7895a8;
+      font-size: .9rem;
+    }
+    .gradient-line {
+      height: 2px;
+      width: 100%;
+      margin: 0 auto 24px;
+      background: linear-gradient(90deg, transparent, var(--sky), var(--pink), transparent);
+      opacity: .7;
+    }
+    @media (max-width: 650px) {
+      .container { width: min(100% - 20px, 1050px); padding-top: 25px; }
+      .hero { padding: 45px 18px 38px; border-radius: 22px; }
+      .card { padding: 24px 20px; }
+      .contact { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="container">
+    <section class="hero">
+      <div class="logo">🔒</div>
+      <h1>FunkBot</h1>
+      <p class="subtitle">
+        Política de Privacidad — aqui esta el como FunkBot maneja la información necesaria para funcionar dentro de Discord.
+      </p>
+      <div class="date">Última actualización · 22 de septiembre de 2026</div>
+    </section>
+
+    <section class="content">
+      <article class="card">
+        <h2><span>01</span> Recopilación de datos</h2>
+        <div class="highlight">
+          <strong>FunkBot no recopila ni almacena datos personales de sus usuarios.</strong>
+        </div>
+        <p>Para funcionar correctamente, FunkBot puede recibir y procesar temporalmente información proporcionada por Discord durante la ejecución de sus funciones, como:</p>
+        <ul>
+          <li>Identificadores de usuarios.</li>
+          <li>Identificadores de servidores.</li>
+          <li>Identificadores de canales.</li>
+          <li>Información de comandos enviados a FunkBot.</li>
+          <li>Información necesaria para gestionar la reproducción de música.</li>
+        </ul>
+        <p>Esta información se utiliza únicamente cuando es necesaria para ejecutar las funciones solicitadas y <strong>no se almacena permanentemente en una base de datos de FunkBot</strong>.</p>
+      </article>
+
+      <article class="card">
+        <h2><span>02</span> Uso de la información</h2>
+        <p>La información recibida temporalmente desde Discord se utiliza exclusivamente para permitir el funcionamiento de FunkBot.</p>
+        <p>Por ejemplo, puede utilizarse para:</p>
+        <ul>
+          <li>Identificar dónde debe ejecutarse un comando.</li>
+          <li>Gestionar canales de voz.</li>
+          <li>Reproducir, pausar o cambiar música.</li>
+          <li>Administrar temporalmente una cola de reproducción.</li>
+          <li>Responder a comandos enviados por los usuarios.</li>
+        </ul>
+        <p>Esta información no se utiliza para publicidad, elaboración de perfiles de usuarios ni otros fines ajenos al funcionamiento de FunkBot.</p>
+      </article>
+
+      <article class="card">
+        <h2><span>03</span> Almacenamiento de datos</h2>
+        <p>FunkBot <strong>no mantiene una base de datos con información personal de sus usuarios</strong>.</p>
+        <p>La información necesaria para determinadas funciones puede mantenerse temporalmente en memoria mientras FunkBot se encuentra funcionando.</p>
+        <p>Por ejemplo, una cola de reproducción puede existir temporalmente mientras se utiliza el Bot en un servidor.</p>
+        <p>Esta información temporal puede desaparecer cuando deja de ser necesaria, cuando finaliza la sesión correspondiente o cuando el servicio se reinicia.</p>
+      </article>
+
+      <article class="card">
+        <h2><span>04</span> Mensajes y conversaciones</h2>
+        <p>FunkBot no almacena conversaciones de los usuarios de Discord.</p>
+        <p>El Bot puede procesar comandos o información enviada directamente a sus funciones cuando sea necesario para responder a una solicitud.</p>
+        <p>FunkBot no utiliza conversaciones de los servidores para crear perfiles de usuarios ni para fines publicitarios.</p>
+      </article>
+
+      <article class="card">
+        <h2><span>05</span> Compartición y venta de datos</h2>
+        <div class="highlight">
+          <strong>FunkBot no vende, comercializa ni proporciona bases de datos personales de sus usuarios a terceros.</strong>
+        </div>
+        <p>Algunas funciones pueden depender de servicios externos, como Discord o proveedores utilizados para localizar o reproducir contenido musical.</p>
+        <p>La información procesada directamente por dichos servicios está sujeta a sus respectivas políticas de privacidad.</p>
+      </article>
+
+      <article class="card">
+        <h2><span>06</span> Eliminación de datos</h2>
+        <p>Debido a que FunkBot no mantiene una base de datos permanente con información personal de sus usuarios, normalmente no existen datos personales almacenados por FunkBot que sea necesario solicitar eliminar.</p>
+        <p>Si consideras que existe información relacionada contigo o con tu servidor que debería ser eliminada, puedes comunicarte mediante los medios indicados en la sección de contacto.</p>
+      </article>
+
+      <article class="card">
+        <h2><span>07</span> Seguridad</h2>
+        <p>Aunque FunkBot no almacena datos personales de usuarios de manera permanente, se toman medidas razonables para proteger el funcionamiento del servicio y evitar accesos no autorizados a su infraestructura.</p>
+      </article>
+
+      <article class="card">
+        <h2><span>08</span> Servicios de terceros</h2>
+        <p>FunkBot funciona dentro de Discord y puede depender de otros servicios externos para proporcionar determinadas funciones, especialmente aquellas relacionadas con música.</p>
+        <p>FunkBot no controla las políticas de privacidad, disponibilidad o funcionamiento de estos servicios externos.</p>
+      </article>
+
+      <article class="card">
+        <h2><span>09</span> Cambios en esta Política de Privacidad</h2>
+        <p>Esta Política de Privacidad puede actualizarse si las funciones de FunkBot cambian o si en el futuro se modifica la manera en que el Bot procesa información.</p>
+        <p>Si FunkBot comienza a almacenar nuevos tipos de información de manera permanente, esta política deberá actualizarse para reflejar dichos cambios.</p>
+        <p>La fecha de la última actualización aparecerá al principio de este documento.</p>
+      </article>
+
+      <article class="card">
+        <h2><span>10</span> Contacto</h2>
+        <p>Si tienes alguna pregunta relacionada con la privacidad o el funcionamiento de FunkBot, puedes comunicarte mediante:</p>
+        <div class="contact">
+          <div class="contact-box"><b>Servidor de soporte</b>https://discord.gg/PhmBMvTTRe</div>
+          <div class="contact-box"><b>Contacto</b>_Best0217</div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="highlight">
+          <strong>En resumen:</strong> FunkBot utiliza únicamente la información temporal necesaria para ejecutar sus funciones y <strong>no mantiene una base de datos con datos personales de sus usuarios</strong>.
+        </div>
+      </article>
+    </section>
+
+    <footer>
+      <div class="gradient-line"></div>
+      © 2026 FunkBot · Hecho Por Best 🌻
+    </footer>
+  </main>
+</body>
+</html>
